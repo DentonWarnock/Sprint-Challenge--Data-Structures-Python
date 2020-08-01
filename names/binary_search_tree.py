@@ -9,8 +9,8 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
-from queue import Queue
-from stack import Stack
+# from queue import Queue
+# from stack import Stack
 
 class BSTNode:
     def __init__(self, value):
@@ -122,41 +122,41 @@ class BSTNode:
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
-    def bft_print(self, node):
-        # create a queue for nodes
-        queue = Queue()
-        # add the first node to the queue
-        queue.enqueue(node)
-        # while queue is not empty
-        while queue.size > 0:
-            # remove the first node from the queue
-            removed = queue.dequeue()
-            # print the removed node
-            print(removed.value)
-            # add all children into the queue
-            if removed.left:
-                queue.enqueue(removed.left)
-            if removed.right:
-                queue.enqueue(removed.right)     
+    # def bft_print(self, node):
+    #     # create a queue for nodes
+    #     queue = Queue()
+    #     # add the first node to the queue
+    #     queue.enqueue(node)
+    #     # while queue is not empty
+    #     while queue.size > 0:
+    #         # remove the first node from the queue
+    #         removed = queue.dequeue()
+    #         # print the removed node
+    #         print(removed.value)
+    #         # add all children into the queue
+    #         if removed.left:
+    #             queue.enqueue(removed.left)
+    #         if removed.right:
+    #             queue.enqueue(removed.right)     
 
-    # Print the value of every node, starting with the given node,
-    # in an iterative depth first traversal
-    def dft_print(self, node):
-        # create a stack for nodes
-        stack = Stack()
-        # add the first node to the stack
-        stack.push(node)
-        # while the stack is not empty
-        while stack.size > 0:
-            # get the current node from the top of the stack - pop
-            removed = stack.pop()
-            # print that node
-            print(removed.value)
-            # add all children to stack - order matters!
-            if removed.left:
-                stack.push(removed.left)
-            if removed.right:
-                stack.push(removed.right)
+    # # Print the value of every node, starting with the given node,
+    # # in an iterative depth first traversal
+    # def dft_print(self, node):
+    #     # create a stack for nodes
+    #     stack = Stack()
+    #     # add the first node to the stack
+    #     stack.push(node)
+    #     # while the stack is not empty
+    #     while stack.size > 0:
+    #         # get the current node from the top of the stack - pop
+    #         removed = stack.pop()
+    #         # print that node
+    #         print(removed.value)
+    #         # add all children to stack - order matters!
+    #         if removed.left:
+    #             stack.push(removed.left)
+    #         if removed.right:
+    #             stack.push(removed.right)
         # done when stack is empty
 
     # Stretch Goals -------------------------
@@ -183,9 +183,9 @@ bst.insert(3)
 bst.insert(4)
 bst.insert(2)
 
-bst.in_order_print(bst)
-bst.bft_print(bst)
-bst.dft_print(bst)
+# bst.in_order_print(bst)
+# bst.bft_print(bst)
+# bst.dft_print(bst)
 
 # print("elegant methods")
 # print("pre order")
