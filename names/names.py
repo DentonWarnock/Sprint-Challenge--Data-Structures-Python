@@ -79,7 +79,7 @@ start_time = time.time()
 duplicates = set(names_1).intersection(set(names_2))
 #
 #
-# runtime: 1.0114490985870361 seconds
+# runtime: 0.003000974655151367 seconds!!! By far the most effecient of the 3 solutions
 #
 #
 
