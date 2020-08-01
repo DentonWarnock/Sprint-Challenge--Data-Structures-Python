@@ -57,3 +57,32 @@ print (f"runtime: {end_time - start_time} seconds")
 # structures, but you may not import any additional libraries that you did not write yourself.
 
 
+start_time = time.time()
+
+# list comprehension
+duplicates = [name1 for name1 in names_1 if name1 in names_2]
+#
+#
+# runtime: 1.0114490985870361 seconds
+#
+#
+
+end_time = time.time()
+print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
+print (f"runtime: {end_time - start_time} seconds")
+
+print("\n")
+
+start_time = time.time()
+
+# using python built in set data type
+duplicates = set(names_1).intersection(set(names_2))
+#
+#
+# runtime: 1.0114490985870361 seconds
+#
+#
+
+end_time = time.time()
+print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
+print (f"runtime: {end_time - start_time} seconds")
